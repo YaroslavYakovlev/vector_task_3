@@ -6,7 +6,7 @@ int main(){
   std::vector<int> vec(20);
   int value;
   for(int i = 0; i < vec.size();){
-    while (value != -1){  
+    while (value != -1){
       std::cin >> value;
       vec[i] = value;
       i++;
@@ -15,12 +15,11 @@ int main(){
         vec.push_back(value);
       }
     }
+    break;
   }
-
   for(int i = 0; i < vec.size(); i++){
     std::cout << vec[i] << " ";
-  }
-  
+  }  
   return 0;
 }
 

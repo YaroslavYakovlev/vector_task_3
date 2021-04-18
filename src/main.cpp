@@ -5,18 +5,17 @@ int main(){
   std::cout << "Vector task 3" << std::endl;
   std::vector<int> vec(20);
   int value;
-  for(int i = 0; i < vec.size();){
+  int countInput = 0;
+  std::cin >> value;
     while (value != -1){
+      vec[countInput] = value;
       std::cin >> value;
-      vec[i] = value;
-      i++;
-      if(i>20){
+      countInput++;
+      if(countInput>20){
         vec.erase(vec.begin());
         vec.push_back(value);
       }
     }
-    break;
-  }
   for(int i = 0; i < vec.size(); i++){
     std::cout << vec[i] << " ";
   }  
